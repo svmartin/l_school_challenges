@@ -13,9 +13,4 @@ class DNA
     end
     differences
   end
-end # end of DNA class
-
-p DNA.new('').hamming_distance('')
-p DNA.new('GGACTGA').hamming_distance('GGACTGA')
-p DNA.new('ACT').hamming_distance('GGA')
-p DNA.new('GGACGGATTCTGACCTGGACTAATTTTGGGG').hamming_distance('AGGACGGATTCTGACCTGGACTAATTTTGGGG')
+end

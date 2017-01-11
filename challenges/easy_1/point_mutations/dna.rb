@@ -16,15 +16,7 @@ class DNA
       compare_sequences(@strand, distance)
     end
   end
-  
-  # def equal_sizes_strand_cut
-    
-  # end
-  
-  # def equal_sizes_distance_cut
-    
-  # end
-  
+
   def compare_sequences(strand, distance)
     differences = 0
     dist_array = distance.chars
@@ -39,7 +31,3 @@ class DNA
   end
 end # end of DNA class
 
-p DNA.new('').hamming_distance('')
-p DNA.new('GGACTGA').hamming_distance('GGACTGA')
-p DNA.new('ACT').hamming_distance('GGA')
-p DNA.new('GGACGGATTCTGACCTGGACTAATTTTGGGG').hamming_distance('AGGACGGATTCTGACCTGGACTAATTTTGGGG')

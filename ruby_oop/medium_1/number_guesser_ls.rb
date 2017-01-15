@@ -50,3 +50,5 @@ class GuessingGame
     @secret_number = rand(RANGE)
   end
 end
+
+GuessingGame.new.play

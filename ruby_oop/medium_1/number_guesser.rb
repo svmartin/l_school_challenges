@@ -1,30 +1,29 @@
-# 1 to 100
-# maximum of 7 guesses per game
-# each call to play should reset the game object and the number to be guessed
-
-# generate random number between 1 and 100
-# store random number
-# ask user for guess
-# store guess
-# keep track of number of guesses
-# display number of guesses
-# dislay "hint" if number is too high or too low
-# each time through, check if user has used all guesses or chosen correct number
-# when 'play' is called, new random number should be generated AND guess count
-# should go back to ZERO
-
 class PingGame
   NUMBERS = (1..100).to_a.freeze
-  
-  def initialize
-    @guesses = 7
-    @choice = nil
-  end
+  MAX_GUESSES = 7
   
   def play
-    @number = (1..100).to_a.sample
-    loop do
-      puts "You have #{@guesses} guesses remaining."
+    reset
+    guess
+    check_for_winner
+  end
+  
+  def reset
+    @number = NUMBERS.sample
+    @guesses = MAX_GUESSES
+  end
+  
+  def check_for_winner
+    if @choice == @number
+      puts("You won! It was #{@number}.") 
+    else
+      puts("Bye. You lost. It was #{@number}.")
+    end
+  end
+  
+  def guess
+    MAX_GUESSES.times do |num|
+      puts "You have #{MAX_GUESSES - num} guess(es) remaining."
       loop do
         puts "Enter a number between 1 and 100"
         @choice = gets.chomp.to_i
@@ -32,13 +31,14 @@ class PingGame
         puts "Please enter a valid number."
       end
       display_results
-      @guesses -= 1
-      break if @guesses == 0 || winner?
+      break if game_over?
     end
-    result = winner? ? "You won! It was #{@number}." : "Bye. You lost. It was #{@number}."
-    puts result
   end
   
+  def game_over?
+    @guesses == 0 || winner?
+  end
+
   def winner?
     @choice == @number
   end

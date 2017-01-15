@@ -1,21 +1,6 @@
-# 1 to 100
-# maximum of 7 guesses per game
-# each call to play should reset the game object and the number to be guessed
-
-# generate random number between 1 and 100
-# store random number
-# ask user for guess
-# store guess
-# keep track of number of guesses
-# display number of guesses
-# dislay "hint" if number is too high or too low
-# each time through, check if user has used all guesses or chosen correct number
-# when 'play' is called, new random number should be generated AND guess count
-# should go back to ZERO
-
 class PingGame
   NUMBERS = (1..100).to_a.freeze
-  
+
   def initialize
     @guesses = 7
     @choice = nil

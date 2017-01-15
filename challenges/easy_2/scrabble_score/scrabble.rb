@@ -31,3 +31,7 @@ end # end Scrabble class
 
 tester = Scrabble.new("cabbage")
 p tester.score
+
+p Scrabble.score("soya")
+
+p Scrabble.score(nil)

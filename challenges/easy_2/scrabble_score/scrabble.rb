@@ -27,11 +27,4 @@ class Scrabble
     word = '' if word.nil?
     word.downcase
   end
-end # end Scrabble class
-
-tester = Scrabble.new("cabbage")
-p tester.score
-
-p Scrabble.score("soya")
-
-p Scrabble.score(nil)
+end 

@@ -1,15 +1,3 @@
-# within 45 minutes
-# read description 3 times
-# communicate and clarify
-# have a plan (algorithm)
-# verify with test cases
-# manage your energy
-# abstraction
-
-# character set consiting of letters, a space, and a point.
-# words consist of one or more, but at most 20 letters.
-# 
-
 test_string = "whats the matter with kansas."
 test_result = "whats eht matter htiw kansas."
 

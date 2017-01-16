@@ -29,5 +29,4 @@ class DNA
     end
     differences
   end
-end # end of DNA class
-
+end

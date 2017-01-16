@@ -11,7 +11,4 @@ class Octal
     end
     total
   end
-end # class Octal end
-
-tester = Octal.new('8')
-p tester.to_decimal
+end 

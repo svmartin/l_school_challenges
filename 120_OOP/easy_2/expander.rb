@@ -7,7 +7,7 @@ class Expander
   end
 
   def to_s
-    self.expand(3)
+    expand(3)
   end
 
   private
@@ -19,3 +19,6 @@ end
 
 expander = Expander.new('xyz')
 puts expander
+
+# Private methods can NOT be called with an explicit received, even if that
+# received is self.

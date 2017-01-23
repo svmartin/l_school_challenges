@@ -21,5 +21,3 @@ end # class Sieve end
 
 tester = Sieve.new(30)
 p tester.primes
-
-
